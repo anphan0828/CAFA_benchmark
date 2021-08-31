@@ -4,7 +4,7 @@ A quick program to create CAFA benchmark, need more exhaustive testing
 ## Installation
 User can either use github interface Download or type the following command in command line:
 ```bash
-git clone https://github.com/nguyenngochuy91/CAFA_benchmark
+git clone https://github.com/idoerg/CAFA_benchmark
 ```
 User has to install python, and biopython (would recommend use anaconda package). 
 ## Usage:
