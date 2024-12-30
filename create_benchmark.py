@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+####!/usr/bin/python
 '''
 Program: creating CAFA benchmark
 Author : Huy Nguyen
@@ -15,9 +16,9 @@ argument parsers
 '''
 def get_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--t1","-t1",help="t1 file")
-    parser.add_argument("--t2","-t2", help="t2 file")
-    parser.add_argument("--output","-o",help="output directory to store the 6 benchmark file")
+    parser.add_argument("--t1","-t1", required=True, help="t1 file")
+    parser.add_argument("--t2","-t2", required=True, help="t2 file")
+    parser.add_argument("--output","-o",default="cafa_benchmark",help="output directory for benchmark filesa (default: cafa_benchmark)")
     args = parser.parse_args()
     return args
 '''
@@ -85,7 +86,7 @@ def write_file(dic,knowledge,name):
             final_name = name+knowledge+'_bpo'
         elif ontology =='C':
             final_name = name+knowledge+'_cco'
-        print "Writing {} file".format(final_name)
+        print("Writing {} file".format(final_name))
         file_out = open(final_name,'w')
         for protein in sorted(dic[ontology]):
             for annotation in dic[ontology][protein]:
@@ -108,7 +109,7 @@ if __name__ == "__main__":
     try:
         os.mkdir(outdir)
     except:
-        print "The directory has already been created"
+        print("The directory has already been created")
     num1 = t1.split('.')[-1]
     num2 = t2.split('.')[-1]
     name = outdir+'/'+'.'.join(t1.split('/')[-1].split('.')[:-1])+'.'+num2+'-'+num1+'_benchmark_'
