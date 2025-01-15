@@ -1,0 +1,8 @@
+{
+  "Experimental": ["EXP", "IDA", "IPI", "IMP", "IGI", "IEP", "HTP", "HDA", "HMP", "HGI", "HEP"],
+  "Computational": ["ISS", "ISO", "ISA", "ISM", "IGC", "RCA"],
+  "Phylogenetical": ["IBA", "IBD", "IKR", "IRD"],
+  "AuthorStatement": ["TAS", "NAS"],
+  "CuratorStatement": ["IC", "ND"],
+  "Electronic": ["IEA"]
+}
