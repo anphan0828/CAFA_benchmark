@@ -99,3 +99,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# tables 
+*.tsv
+
+# output and notes
+00notes
+output/

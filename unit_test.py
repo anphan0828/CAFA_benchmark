@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 '''
 Program: Unit testing
 Author : Huy Nguyen
@@ -12,8 +12,8 @@ import argparse
 from Bio.UniProt import GOA
 from create_benchmark import read_gaf,analyze
 
-t1_name,t1_dic,all_protein_t1 = read_gaf("/home/huyn/Ataur/unit_test/1")
-t2_name,t2_dic,all_protein_t2 = read_gaf("/home/huyn/Ataur/unit_test/2")
+t1_name,t1_dic,all_protein_t1 = read_gaf("./unit_test/1")
+t2_name,t2_dic,all_protein_t2 = read_gaf("./unit_test/2")
 NK_dic,LK_dic= analyze(t1_dic,t2_dic,all_protein_t1)
 
 class TestBenchmark(unittest.TestCase):
